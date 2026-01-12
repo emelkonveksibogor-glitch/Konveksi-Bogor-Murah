@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Emel Konveksi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Efek underline animasi */
+    .nav-link {
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #facc15;
+      transition: width 0.3s ease-in-out;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-red-900 text-white p-4 sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <img src="gambar/logo-emel.png" alt="Logo Emel Konveksi Bogor" class="h-10 w-auto">
+        <h1 class="text-xl font-bold">Emel Konveksi</h1>
+      </div>
+
+      <!-- Menu Desktop -->
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="index.html" class="nav-link hover:text-yellow-400 transition">Home</a></li>
+        <li><a href="about.html" class="nav-link hover:text-yellow-400 transition">Tentang</a></li>
+        <li><a href="products.html" class="nav-link hover:text-yellow-400 transition">Produk</a></li>
+        <li><a href="order.html" class="nav-link hover:text-yellow-400 transition">Pemesanan</a></li>
+        <li><a href="faq.html" class="nav-link text-yellow-400 font-bold hover:text-yellow-300">FAQ</a></li>
+        <li><a href="contact.html" class="nav-link hover:text-yellow-400 transition">Kontak</a></li>
+      </ul>
+
+      <!-- Hamburger Menu (Mobile) -->
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" 
+             class="h-7 w-7" fill="none" viewBox="0 0 24 24" 
+             stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" 
+                stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Dropdown Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 px-4">
+      <a href="index.html" class="block nav-link hover:text-yellow-400">Home</a>
+      <a href="about.html" class="block nav-link hover:text-yellow-400">Tentang</a>
+      <a href="products.html" class="block nav-link hover:text-yellow-400">Produk</a>
+      <a href="order.html" class="block nav-link hover:text-yellow-400">Pemesanan</a>
+      <a href="faq.html" class="block nav-link text-yellow-400 font-bold">FAQ</a>
+      <a href="contact.html" class="block nav-link hover:text-yellow-400">Kontak</a>
+    </div>
+  </nav>
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto p-6 md:p-10 bg-white shadow-md mt-6 rounded-lg">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-red-900">Pertanyaan Umum (FAQ)</h2>
+    <div class="space-y-6 text-gray-700">
+
+      <div>
+        <h3 class="font-semibold text-lg text-red-900">Apakah bisa dibuat sampel dahulu?</h3>
+        <p>Ya, kami menyediakan pembuatan sampel dengan 2 sistem:  
+        1) Deposit Rp300.000 – Rp500.000 (tergantung pesanan & kerumitan), atau  
+        2) Setelah DP, kami buat 1 pcs untuk di-ACC sebelum produksi massal.</p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-lg text-red-900">Apakah bisa kirim sampel bahan?</h3>
+        <p>Kami dapat mengirim sampel bahan ke alamat Anda sesuai stok yang tersedia.  
+        Biaya pengiriman ditanggung sepenuhnya oleh penerima.</p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-lg text-red-900">Berapa lama proses produksi?</h3>
+        <p>Normalnya 2–4 minggu setelah desain fix, namun bisa dinegosiasikan sesuai deadline.</p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-lg text-red-900">Apakah ada garansi produk?</h3>
+        <p>Ada. Kami memberikan garansi berupa perbaikan produk jika terdapat ketidaksesuaian dengan desain yang disepakati.</p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-lg text-red-900">Apakah harga sudah termasuk ongkos kirim?</h3>
+        <p>Belum. Ongkos kirim keluar kota ditanggung oleh pembeli.</p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-lg text-red-900">Bagaimana cara pembayaran?</h3>
+        <p>Pembayaran dilakukan dengan sistem DP terlebih dahulu, dan pelunasan saat produk selesai.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/6289663424389?text=Halo%20Emel%20Konveksi,%20saya%20ingin%20pesan%20produk"
+     target="_blank"
+     class="fixed bottom-5 right-5 z-50">
+     <img src="gambar/whatsapp.png" alt="WhatsApp" 
+          class="w-14 h-14 drop-shadow-lg hover:scale-110 transition-transform">
+  </a>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center p-6 mt-10">
+    <p class="font-semibold">Emel Konveksi Bogor</p>
+    <p>Kp Bubulak, Kel. Kencana, Kec. Tanah Sareal, Kota Bogor</p>
+    <p>Telp/WA: 0896 6342 4389</p>
+    <p class="mt-2">© 2025 Emel Konveksi Bogor. All rights reserved.</p>
+  </footer>
+
+  <!-- Script for Mobile Menu -->
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+</body>
+</html>

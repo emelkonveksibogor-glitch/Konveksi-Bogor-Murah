@@ -1,0 +1,139 @@
+<!DOCTYPE html> 
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Emel Konveksi Bogor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Efek underline animasi */
+    .nav-link {
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #facc15;
+      transition: width 0.3s ease-in-out;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-red-900 text-white p-4 flex justify-between items-center sticky top-0 z-50 shadow-md">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center space-x-2">
+      <img src="gambar/logo-emel.png" alt="Logo Emel Konveksi Bogor" class="h-12">
+      <span class="text-xl font-bold hidden sm:block">Emel Konveksi</span>
+    </a>
+
+    <!-- Hamburger Button -->
+    <button id="menu-btn" class="sm:hidden focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Menu -->
+    <ul id="menu" class="hidden sm:flex space-x-6 flex-col sm:flex-row sm:space-x-6 sm:space-y-0 absolute sm:static bg-red-900 sm:bg-transparent left-0 right-0 top-16 sm:top-auto p-4 sm:p-0">
+      <li><a href="index.html" class="nav-link text-yellow-400 font-bold hover:text-yellow-300">Home</a></li>
+      <li><a href="about.html" class="nav-link hover:text-yellow-400 transition">Tentang</a></li>
+      <li><a href="products.html" class="nav-link hover:text-yellow-400 transition">Produk</a></li>
+      <li><a href="order.html" class="nav-link hover:text-yellow-400 transition">Pemesanan</a></li>
+      <li><a href="faq.html" class="nav-link hover:text-yellow-400 transition">FAQ</a></li>
+      <li><a href="contact.html" class="nav-link hover:text-yellow-400 transition">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative flex items-center justify-center text-white h-[450px] md:h-[550px] bg-center bg-no-repeat bg-cover"
+           style="background-image: url('gambar/banner.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 text-center px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Konveksi Murah & Terpercaya di Bogor</h2>
+      <p class="text-lg mb-6">Produksi seragam, kaos, jaket, wearpack, dan custom sesuai kebutuhan Anda</p>
+      <a href="products.html" class="bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
+        Lihat Produk
+      </a>
+    </div>
+  </section>
+
+  <!-- Tentang Singkat -->
+  <section class="py-16 px-6 text-center">
+    <h3 class="text-3xl font-bold mb-4">Tentang Kami</h3>
+    <p class="max-w-2xl mx-auto text-gray-700">
+      Emel Konveksi Bogor adalah penyedia jasa konveksi murah dan terpercaya. 
+      Kami melayani produksi seragam, kaos, jaket, wearpack, dan berbagai kebutuhan custom lainnya 
+      dengan kualitas terbaik dan harga terjangkau.
+    </p>
+  </section>
+
+  <!-- Produk Unggulan -->
+  <section class="py-16 px-6 bg-gray-200">
+    <h3 class="text-3xl font-bold text-center mb-10">Produk Unggulan</h3>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <img src="gambar/kaos.jpg" alt="Kaos Custom Emel Konveksi" class="rounded mb-4 w-full h-64 object-cover">
+        <h4 class="font-bold text-lg mb-2">Kaos Custom</h4>
+        <p class="text-gray-600">Buat kaos dengan desain sesuai keinginan Anda.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <img src="gambar/seragam.jpg" alt="Seragam Kerja Emel Konveksi" class="rounded mb-4 w-full h-64 object-cover">
+        <h4 class="font-bold text-lg mb-2">Seragam Kerja</h4>
+        <p class="text-gray-600">Seragam berkualitas untuk kantor, pabrik, dan sekolah.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <img src="gambar/jaket.jpg" alt="Jaket Custom Emel Konveksi" class="rounded mb-4 w-full h-64 object-cover">
+        <h4 class="font-bold text-lg mb-2">Jaket</h4>
+        <p class="text-gray-600">Jaket stylish, hangat, dan nyaman dipakai sehari-hari.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-6 text-center">
+    <h3 class="text-3xl font-bold mb-4">Siap Pesan?</h3>
+    <p class="mb-6 text-gray-700">Hubungi kami untuk konsultasi dan pemesanan sesuai kebutuhan Anda.</p>
+    <a href="order.html" class="bg-red-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition">
+      Pesan Sekarang
+    </a>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/6289663424389?text=Halo%20Emel%20Konveksi,%20saya%20ingin%20pesan%20produk"
+     target="_blank"
+     aria-label="Chat via WhatsApp"
+     class="fixed bottom-5 right-5 z-50">
+     <img src="gambar/whatsapp.png" alt="WhatsApp" 
+          class="w-14 h-14 drop-shadow-lg hover:scale-110 transition-transform">
+  </a>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center p-6">
+    <p class="font-semibold">Emel Konveksi Bogor</p>
+    <p>Kp Bubulak, Kel. Kencana, Kec. Tanah Sareal, Kota Bogor</p>
+    <p>Telp/WA: 0896 6342 4389</p>
+    <p class="mt-2">© 2025 Emel Konveksi Bogor. All rights reserved.</p>
+  </footer>
+
+  <!-- Script untuk Hamburger -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
